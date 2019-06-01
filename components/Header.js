@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import { Header as SHeader } from 'semantic-ui-react'
 
 const linkStyle = {
   marginRight: 15
 };
 
 const Header = () => (
-  <div>
+  <SHeader>
     <Link href="/">
       <a style={linkStyle}>Home</a>
     </Link>
@@ -15,7 +16,7 @@ const Header = () => (
     <Link href="/comic">
       <a style={linkStyle}>Comic</a>
     </Link>
-  </div>
+  </SHeader>
 );
 
 export default Header;
