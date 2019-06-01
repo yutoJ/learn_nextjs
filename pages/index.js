@@ -1,5 +1,6 @@
 import Layout from '../components/MyLayout.js';
 import Link from 'next/link';
+import { Button, Icon } from 'semantic-ui-react'
 
 const PostLink = props => (
   <li>
@@ -37,6 +38,10 @@ export default function Blog() {
   return (
     <Layout>
       <h1>My Blog</h1>
+      <Button size='small' color='green'>
+        <Icon name='download' />
+        Download
+    </Button>
       {getPosts().map(post => (
           <PostLink key={post.id} id={post.id} title={post.title} />
       ))}
